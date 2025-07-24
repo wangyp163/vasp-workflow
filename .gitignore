@@ -2,3 +2,5 @@
 /demo
 /process_potcar.sh
 /test
+/core/__pycache__
+/task/__pycache__
