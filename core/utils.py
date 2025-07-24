@@ -10,7 +10,7 @@ import warnings
 import importlib
 from pathlib import Path
 from copy import deepcopy
-import shutil
+from shutil import copyfile
 from typing import Dict, Any, Optional, List, Union
 
 # 第三方库
