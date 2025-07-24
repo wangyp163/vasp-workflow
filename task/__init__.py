@@ -2,6 +2,7 @@ from pathlib import Path
 import warnings
 import importlib
 import sys
+from copy import deepcopy
 # 设置项目根路径
 sys.path.append(str(Path(__file__).parent.parent))
 # 公共核心模块导入
