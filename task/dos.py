@@ -75,6 +75,7 @@ def pre_dos(work_path):
     return dos_path
     
 def post_dos(work_path='./dos'):
+    exec_linux_command(pr.tdos_from_vaspkit, pr.hint_tdos)
     datas = np.loadtxt('TDOS.dat', dtype=np.float64)
     # --------------------- PLOTs ------------------------
     axe = plt.subplot(111)
