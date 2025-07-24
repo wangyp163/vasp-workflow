@@ -1,4 +1,6 @@
-from . import * # 从 task/__init__.py 添加基础模块
+from core.utils import *
+from core.Function import *
+from core.parameter_function import *
 
 def get_magnetic_moments(oszicar_path="OSZICAR"):
     mag_step = []

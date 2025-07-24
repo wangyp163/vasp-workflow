@@ -3,8 +3,8 @@
 # @Time : 2025/7/23 18:16
 # @Author : Wangyp
 
+from core.utils import *
 from . import parameter_function as pr
-import os
 from pymatgen.io.vasp.outputs import Vasprun
 from pymatgen.core.structure import Structure
 from ase.io import read

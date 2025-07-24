@@ -1,6 +1,7 @@
-from . import * # 从 task/__init__.py 添加基础模块
+from core.utils import *
+from core.Function import *
+from core.parameter_function import *
 from pymatgen.io.vasp.sets import MPStaticSet
-import numpy as np
 import matplotlib.pyplot as plt
 def pre_dos(work_path):
     os.chdir(work_path)

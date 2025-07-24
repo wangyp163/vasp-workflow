@@ -1,4 +1,6 @@
-from . import * # 从 task/__init__.py 添加基础模块
+from core.utils import *
+from core.Function import *
+from core.parameter_function import *
 
 def pre_vasp_phonon(work_path):
     print("使用密度泛函微扰理论（DFPT）计算声子谱（phonon）")

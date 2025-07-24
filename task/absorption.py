@@ -1,4 +1,6 @@
-from . import * # 从 task/__init__.py 添加基础模块
+from core.utils import *
+from core.Function import *
+from core.parameter_function import *
 def pre_absorption(work_path):
     os.chdir(work_path)
     relax_path = work_path + os.sep + "relax"

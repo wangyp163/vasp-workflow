@@ -5,13 +5,7 @@ VASP任务管理模块
 提供根据task_name动态调用对应task模块函数的功能
 """
 
-import os
-import sys
-from pathlib import Path
-
-# 设置项目根路径
-sys.path.append(str(Path(__file__).parent.parent))
-
+from core.utils import *
 from core.Function import *
 from core.parameter_function import *
 

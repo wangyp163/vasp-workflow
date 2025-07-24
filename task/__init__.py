@@ -1,15 +1,5 @@
-from pathlib import Path
-import warnings
-import importlib
-import sys
-from copy import deepcopy
-# 设置项目根路径
-sys.path.append(str(Path(__file__).parent.parent))
-# 公共核心模块导入
-from core.Function import *
-from core.parameter_function import *
-
-# 自动导入所有task模块并导出函数
+from core.utils import *
+# 导入所有task模块并导出函数
 task_modules = [
     'relax', 'scf', 'dos', 'phonon', 'magnetic', 
     'elastic', 'absorption', 'bader', 'pbe_band'
