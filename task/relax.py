@@ -58,3 +58,13 @@ def pre_relax(work_path):
     print("结构优化的输入文件已创建！")
 
     return relax_path
+
+
+def post_relax(work_path):
+    os.chdir(work_path)
+    status = check_vasp()
+    if status == True:
+        e_converged, ionic_converged, all_converged, final_energy = check_vasp_converge()
+        if all_converged:
+            return True
+    return False

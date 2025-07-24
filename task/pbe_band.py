@@ -2,7 +2,7 @@ from core.utils import *
 from core.Function import *
 from core.parameter_function import *
 
-def pre_vasp_PBE_band(work_path):
+def pre_PBE_band(work_path):
     os.chdir(work_path)
     relax_path = work_path + os.sep + "relax"
     scf_path = work_path + os.sep + "scf"
@@ -76,7 +76,7 @@ def pre_vasp_PBE_band(work_path):
     print("PBE 能带计算的输入文件已创建！")
     return PBE_band_path
 
-def plot_PBE_band():
+def post_PBE_band():
     # ------------------- Data Read ----------------------
     group_labels = []
     xtick = []

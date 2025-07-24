@@ -2,7 +2,7 @@ from core.utils import *
 from core.Function import *
 from core.parameter_function import *
 
-def pre_vasp_phonon(work_path):
+def pre_phonon(work_path):
     print("使用密度泛函微扰理论（DFPT）计算声子谱（phonon）")
     os.chdir(work_path)
     relax_path = work_path + os.sep + "relax"

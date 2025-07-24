@@ -66,3 +66,13 @@ def pre_scf(work_path):
     print("自洽计算的输入文件已创建！")
 
     return scf_path
+
+
+def post_scf(work_path):
+    os.chdir(work_path)
+    status = check_vasp()
+    if status == True:
+        e_converged, ionic_converged, all_converged, final_energy = check_vasp_converge()
+        if all_converged:
+            return True
+    return False
