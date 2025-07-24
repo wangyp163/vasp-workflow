@@ -90,7 +90,7 @@ phonopy_get_data = "phonopy-bandplot --gnuplot > phonopy.out"
 
 copy_kpath_to_kpoints = "cp KPATH.in KPOINTS"
 PBE_band_from_vaspkit = "(echo 211) | vaspkit >> vaspkit.log"
-tdos_from_vaspkit = "(echo 111) | vaspkit >> vaspkit.log"
+tdos_from_vaspkit = "(echo 111; echo 1) | vaspkit >> vaspkit.log"
 
 ourcar_log = "outcar.log"
 vasp_success = 'grep "Elapsed time" OUTCAR | wc -l > {}'.format(ourcar_log)

@@ -75,6 +75,7 @@ def pre_dos(work_path):
     return dos_path
     
 def post_dos(work_path='./dos'):
+    #使用vaspkit 创建 TDOS.dat
     exec_linux_command(pr.tdos_from_vaspkit, pr.hint_tdos)
     datas = np.loadtxt('TDOS.dat', dtype=np.float64)
     # --------------------- PLOTs ------------------------
@@ -88,13 +89,13 @@ def post_dos(work_path='./dos'):
         axe.plot(datas[:, 0], datas[:, 2], linewidth=1.0, color=pr.colormaps[1], label=pr.spin_labels[1])
         axe.legend(loc='best', shadow=False, labelspacing=0.1)
 
-    axe.set_ylabel(r'DOS', fontdict=pr.font)
+    axe.set_ylabel(r'TDOS', fontdict=pr.font)
     axe.set_ylabel(r'Engergy(eV)', fontdict=pr.font)
     plt.yticks(fontsize=pr.font['size'] - 2)
     axe.set_xlim((datas[:, 0][0], datas[:, 0][-1]))
     fig = plt.gcf()
     fig.set_size_inches(8, 6)
-    plt.savefig('dos.png', dpi=300)
+    plt.savefig('tdos.png', dpi=300)
     #plt.show()
     plt.clf()
     plt.close()
